@@ -12,6 +12,8 @@ namespace Data
         [OdinSerialize] public float moveSpeed = 5f;
         [OdinSerialize] public float luck = 0f;
         [OdinSerialize] public float armor = 0f;
+        [OdinSerialize] public int level = 1;
+        [OdinSerialize] public int experience = 0;
 
         [OdinSerialize, PropertyTooltip("This is damage multiplier")]
         public float damage = 1f;
@@ -35,6 +37,9 @@ namespace Data
         public event Action<float> OnMeleeDamageChanged;
         public event Action<float> OnAttackRangeChanged;
         public event Action<float> OnAttackSpeedChanged;
+        
+        public event Action<int> OnExperienceChanged;
+        public event Action<int> OnLevelChanged;
 
         public float Health
         {
@@ -145,6 +150,30 @@ namespace Data
                 OnAttackSpeedChanged?.Invoke(attackSpeed);
             }
         }
+        
+        public int Experience
+        {
+            get => experience;
+            private set
+            {
+                if (experience == value) return;
+                experience = value;
+                OnExperienceChanged?.Invoke(experience);
+                
+                //TODO: Implement level up logic
+            }
+        }
+        
+        public int Level
+        {
+            get => level;
+            private set
+            {
+                if (level == value) return;
+                level = value;
+                OnLevelChanged?.Invoke(level);
+            }
+        }
 
         public void SetHealth(float value)
         {
@@ -199,7 +228,17 @@ namespace Data
         {
             AttackSpeed = Math.Max(value, 0);
         }
-
+    
+        public void SetExperience(int value)
+        {
+            Experience = Math.Max(value, 0);
+        }
+        
+        public void SetLevel(int value)
+        {
+            Level = Math.Max(value, 1);
+        }
+        
         public void ModifyHealth(float delta)
         {
             SetHealth(Health + delta);
@@ -249,6 +288,16 @@ namespace Data
         {
             SetAttackSpeed(AttackSpeed + delta);
         }
+        
+        public void ModifyExperience(int delta)
+        {
+            SetExperience(Experience + delta);
+        }
+        
+        public void ModifyLevel(int delta)
+        {
+            SetLevel(Level + delta);
+        }
 
         public void Reset()
         {
@@ -261,6 +310,8 @@ namespace Data
             MeleeDamage = 1f;
             AttackRange = 16f;
             AttackSpeed = 1f;
+            Level = 1;
+            Experience = 0;
         }
     }
 }
