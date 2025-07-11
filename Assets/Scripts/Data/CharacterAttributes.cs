@@ -4,6 +4,20 @@ using Sirenix.Serialization;
 
 namespace Data
 {
+    public enum Stat
+    {
+        Health,
+        MaxHealth,
+        MoveSpeed,
+        Luck,
+        Armor,
+        Damage,
+        RangedDamage,
+        MeleeDamage,
+        AttackRange,
+        AttackSpeed
+    }
+    
     [Serializable]
     public class CharacterAttributes
     {
