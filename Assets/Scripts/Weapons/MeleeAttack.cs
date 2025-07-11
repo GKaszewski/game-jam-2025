@@ -20,8 +20,14 @@ namespace Weapons
                 if (hit.gameObject == character.gameObject) continue;
                 
                 var damage = GetFinalDamage();
-                health.TakeDamage(damage);
+                health?.TakeDamage(damage);
             }
+        }
+        
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, GetFinalRange());
         }
     }
 }

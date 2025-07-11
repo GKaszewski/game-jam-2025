@@ -11,7 +11,6 @@ namespace Weapons
     {
         private float timer;
         
-        [SerializeField] private float cooldown = 1f;
         [SerializeField] protected Character character;
         [OdinSerialize, InlineProperty] public WeaponStats weaponStats = new();
 
