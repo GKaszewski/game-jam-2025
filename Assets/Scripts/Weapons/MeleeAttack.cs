@@ -19,7 +19,7 @@ namespace Weapons
                 hit.TryGetComponent<Health>(out var health);
                 if (hit.gameObject == character.gameObject) continue;
                 
-                var damage = character.attributes.Damage * character.attributes.MeleeDamage;
+                var damage = weaponStats.Damage + character.attributes.Damage * character.attributes.MeleeDamage;
                 health.TakeDamage(damage);
             }
         }

@@ -17,9 +17,17 @@ namespace Weapons
         public GameObject Owner { get; private set; }
         public DamageType Type => DamageType.Ranged;
         
-        public void Setup(Character attacker)
+        public void Setup(Character attacker, WeaponStats weaponStats = null)
         {
-            Damage = attacker.attributes.Damage * attacker.attributes.RangedDamage;
+            if (weaponStats != null)
+            {
+                Damage = weaponStats.Damage + attacker.attributes.Damage * attacker.attributes.RangedDamage;
+            }
+            else
+            {
+                Damage = attacker.attributes.Damage * attacker.attributes.RangedDamage;
+            }
+            
             Owner = attacker.gameObject;
         }
         
