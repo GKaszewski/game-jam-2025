@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Weapons
 {
-    public class MeleeAttack : Weapon, IWeapon
+    public class MeleeAttack : Weapon
     {
         [SerializeField] private LayerMask targetMask;
         

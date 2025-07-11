@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Weapons
 {
-    public class AutoWeapon : Weapon, IWeapon
+    public class AutoWeapon : Weapon
     {
         [SerializeField] private GameObject projectilePrefab;
         [SerializeField] private Transform firePoint;
