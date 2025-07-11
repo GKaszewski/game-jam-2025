@@ -5,6 +5,6 @@ namespace Interfaces
 {
     public interface IDamageInflectorSetup
     {
-        void Setup(Character attacker, [CanBeNull] WeaponStats weaponStats = null);
+        void Setup(Character attacker, float damage, [CanBeNull] WeaponStats weaponStats = null);
     }
 }

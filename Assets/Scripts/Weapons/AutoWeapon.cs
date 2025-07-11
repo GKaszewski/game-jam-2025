@@ -12,8 +12,9 @@ namespace Weapons
         {
             var projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             projectile.TryGetComponent<IDamageInflectorSetup>(out var inflector);
-
-            inflector?.Setup(character, weaponStats);
+            
+            var finalDamage = GetFinalDamage();
+            inflector?.Setup(character, finalDamage, weaponStats);
         }
     }
 }

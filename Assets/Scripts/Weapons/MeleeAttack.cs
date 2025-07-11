@@ -8,18 +8,18 @@ namespace Weapons
 {
     public class MeleeAttack : Weapon, IWeapon
     {
-        [SerializeField] private float range = 1f;
         [SerializeField] private LayerMask targetMask;
         
         public override void Fire()
         {
-            var hits = Physics2D.OverlapCircleAll(transform.position, range, targetMask);
+            var finalRange = GetFinalRange();
+            var hits = Physics2D.OverlapCircleAll(transform.position, finalRange, targetMask);
             foreach (var hit in hits)
             {
                 hit.TryGetComponent<Health>(out var health);
                 if (hit.gameObject == character.gameObject) continue;
                 
-                var damage = weaponStats.Damage + character.attributes.Damage * character.attributes.MeleeDamage;
+                var damage = GetFinalDamage();
                 health.TakeDamage(damage);
             }
         }
