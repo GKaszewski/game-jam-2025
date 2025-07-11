@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Data;
 using Interfaces;
+using KBCore.Refs;
 using Sirenix.Serialization;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace Systems
     {
         [OdinSerialize] private List<IStatModifier> activeModifiers = new();
         
-        [SerializeField] private Character character;
+        [SerializeField, Self] private Character character;
         
         public void EquipItem(IStatModifier modifier)
         {

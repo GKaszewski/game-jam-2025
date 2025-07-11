@@ -1,25 +1,27 @@
+using System;
 using Data;
 using Interfaces;
 
 namespace Modifiers
 {
+    [Serializable]
     public class PercentStatModifier : IStatModifier
     {
         private float lastAppliedAmount;
 
-        public Stat Stat { get; set; }
-        public float Percent { get; set; }
-        public string Description => $"{Stat} +{Percent * 100}%";
+        public Stat stat;
+        public float percent;
+        public string Description => $"{stat} +{percent * 100}%";
 
         public void Apply(CharacterAttributes attributes)
         {
             var baseValue = GetBaseValue<float>(attributes);
-            lastAppliedAmount = baseValue * Percent;
+            lastAppliedAmount = baseValue * percent;
             
             var flatModifier = new FlatStatModifier
             {
                 value = lastAppliedAmount,
-                stat = Stat
+                stat = stat
             };
             
             flatModifier.Apply(attributes);
@@ -30,7 +32,7 @@ namespace Modifiers
             var flatModifier = new FlatStatModifier
             {
                 value = -lastAppliedAmount,
-                stat = Stat
+                stat = stat
             };
             
             flatModifier.Apply(attributes);
@@ -38,7 +40,7 @@ namespace Modifiers
 
         private T GetBaseValue<T>(CharacterAttributes attributes)
         {
-            return Stat switch
+            return stat switch
             {
                 Stat.Health => (T)(object)attributes.Health,
                 Stat.MaxHealth => (T)(object)attributes.MaxHealth,

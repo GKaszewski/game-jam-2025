@@ -11,8 +11,8 @@ namespace Weapons
     {
         private float timer;
         
-        [SerializeField] protected Character character;
         [OdinSerialize, InlineProperty] public WeaponStats weaponStats = new();
+        public Character character;
 
         private void Update()
         {
