@@ -919,7 +919,10 @@ MonoBehaviour:
   cooldown: 1
   character: {fileID: 1261447603}
   weaponStats:
-    Damage: 10
+    damage: 3
+    attackSpeed: 2
+    range: 0
+    damageType: 1
   projectilePrefab: {fileID: 4455660151786346708, guid: 5c8ef2a68bd248674af5c1f68f7fc012, type: 3}
   firePoint: {fileID: 523621673}
 --- !u!1 &2062887715
