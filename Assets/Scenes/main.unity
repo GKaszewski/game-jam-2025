@@ -6947,6 +6947,7 @@ GameObject:
   - component: {fileID: 1261447609}
   - component: {fileID: 1261447613}
   - component: {fileID: 1261447614}
+  - component: {fileID: 1261447615}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -7213,9 +7214,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashDuration: 0.1
-  flashColor: {r: 1.6934906, g: 1.6934906, b: 1.6934906, a: 1}
+  flashColor: {r: 1.7207953, g: 1.7207953, b: 1.7207953, a: 1}
   health: {fileID: 1261447608}
   spriteRenderer: {fileID: 628985992}
+--- !u!114 &1261447615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261447599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd1de1bc65a4912a543ebc7230f4ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalVolume: {fileID: 1265960067}
+  health: {fileID: 1261447608}
+  postProcessDuration: 0.5
+  vignetteHitIntensity: 0.3
 --- !u!1 &1265960066
 GameObject:
   m_ObjectHideFlags: 0

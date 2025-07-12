@@ -10,7 +10,6 @@ namespace Systems
         private static readonly int MarkerFlashColor = Shader.PropertyToID("_FlashColor");
         private static readonly int MarkerFlashAmount = Shader.PropertyToID("_FlashAmount");
         private Material material;
-        private Coroutine damageFlashCoroutine;
         
         [SerializeField] private float flashDuration;
         [ColorUsage(true, true)][SerializeField] private Color flashColor = Color.white;
@@ -38,7 +37,7 @@ namespace Systems
 
         private void OnHit()
         {
-            damageFlashCoroutine = StartCoroutine(Flash());
+            StartCoroutine(Flash());
         }
 
         private IEnumerator Flash()
