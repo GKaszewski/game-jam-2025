@@ -12,6 +12,9 @@ namespace Systems
         [SerializeField, Self] private Inventory.Inventory inventory;
         [SerializeField, Self] private CharacterModifierManager characterModifierManager;
         [SerializeField, Self] private CharacterWeaponsManager characterWeaponsManager;
+        
+        public event Action<StatModifierItem> ItemEquipped;
+        public event Action<StatModifierItem> ItemUnequipped;
 
         private void Start()
         {
@@ -42,6 +45,7 @@ namespace Systems
             inventory.AddItem(item);
             foreach (var cure in item.cures) characterModifierManager.EquipItem(cure);
             foreach (var curse in item.curses) characterModifierManager.EquipItem(curse);
+            ItemEquipped?.Invoke(item);
         }
 
         public void UnequipItem(StatModifierItem item)
@@ -51,6 +55,7 @@ namespace Systems
             
             foreach (var cure in item.cures) characterModifierManager.UnequipItem(cure);
             foreach (var curse in item.curses) characterModifierManager.UnequipItem(curse);
+            ItemUnequipped?.Invoke(item);
         }
 
         public void EquipWeapon(WeaponItem weaponItem)

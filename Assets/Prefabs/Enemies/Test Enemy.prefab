@@ -410,6 +410,7 @@ MonoBehaviour:
   character: {fileID: 7110610235440076017}
   deathBehavior:
     _implementer: {fileID: 4476814410094481518}
+  health: {fileID: 5572087310217837258}
 --- !u!114 &4476814410094481518
 MonoBehaviour:
   m_ObjectHideFlags: 0

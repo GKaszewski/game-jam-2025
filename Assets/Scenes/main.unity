@@ -6313,6 +6313,7 @@ GameObject:
   - component: {fileID: 1261447611}
   - component: {fileID: 1261447610}
   - component: {fileID: 1261447609}
+  - component: {fileID: 1261447613}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -6418,7 +6419,7 @@ MonoBehaviour:
     level: 1
     experience: 0
     baseExperienceToLevelUp: 100
-    damage: 1
+    damage: 49
     rangedDamage: 1
     meleeDamage: 1
     attackRange: 16
@@ -6479,6 +6480,7 @@ MonoBehaviour:
   character: {fileID: 1261447603}
   deathBehavior:
     _implementer: {fileID: 1261447606}
+  health: {fileID: 1261447608}
 --- !u!114 &1261447608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6550,6 +6552,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1261447603}
+--- !u!114 &1261447613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261447599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f973da80e1dd49c8a9efdc270992b705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 519420031}
+  weapons: []
+  weaponsManager: {fileID: 1261447612}
 --- !u!1 &1300312975
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,7 +6968,7 @@ PrefabInstance:
       objectReference: {fileID: 1261447609}
     - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: possibleItems.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: possibleWeapons.Array.size
@@ -6961,6 +6978,10 @@ PrefabInstance:
       propertyPath: 'possibleItems.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 08c8a414828d19951b3a413f631a6d70, type: 2}
+    - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: 'possibleItems.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5366536d04e61959f911fa119df9eca4, type: 2}
     - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: 'possibleWeapons.Array.data[0]'
       value: 

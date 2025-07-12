@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using Data;
+using Inventory;
 using KBCore.Refs;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -13,6 +15,9 @@ namespace Systems
         
         [SerializeField] private IReadOnlyList<Weapon> EquippedWeapons => equippedWeapons.AsReadOnly();
         [SerializeField, Self] private Character character;
+        
+        public event Action<Weapon> WeaponEquipped;
+        public event Action<Weapon> WeaponUnequipped;
 
         public Weapon EquipWeapon(GameObject weaponPrefab)
         {
@@ -22,6 +27,7 @@ namespace Systems
                 weapon.character = character;
                 equippedWeapons.Add(weapon);
                 weapon.enabled = true;
+                WeaponEquipped?.Invoke(weapon);
                 return weapon;
             }
 
@@ -33,6 +39,7 @@ namespace Systems
         {
             if (!equippedWeapons.Remove(weapon)) return;
             weapon.enabled = false;
+            WeaponUnequipped?.Invoke(weapon);
 
             if (!destroy) return;
             Destroy(weapon.gameObject);
@@ -43,6 +50,7 @@ namespace Systems
             foreach (var weapon in equippedWeapons)
             {
                 weapon.enabled = false;
+                WeaponUnequipped?.Invoke(weapon);
             }
         }
         
@@ -51,6 +59,7 @@ namespace Systems
             foreach (var weapon in equippedWeapons)
             {
                 weapon.enabled = true;
+                WeaponEquipped?.Invoke(weapon);
             }
         }
         
@@ -58,6 +67,7 @@ namespace Systems
         {
             foreach (var weapon in equippedWeapons)
             {
+                WeaponUnequipped?.Invoke(weapon);
                 Destroy(weapon.gameObject);
             }
             equippedWeapons.Clear();

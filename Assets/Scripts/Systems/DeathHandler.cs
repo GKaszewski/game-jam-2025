@@ -9,6 +9,7 @@ namespace Systems
     {
         [Self, SerializeField] private Character character;
         [Self, SerializeField] private InterfaceRef<IDeathBehavior> deathBehavior;
+        [Self, SerializeField] private Health health;
 
         private void OnEnable()
         {
@@ -30,7 +31,8 @@ namespace Systems
 
         private void Die()
         {
-            deathBehavior.Value.Die();
+            var lastAttacker = health.LastAttacker;
+            deathBehavior.Value.Die(lastAttacker);
         }
     }
 }
