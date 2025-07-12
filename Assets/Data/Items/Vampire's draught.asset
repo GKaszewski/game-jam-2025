@@ -71,4 +71,4 @@ MonoBehaviour:
   itemName: "Vampire\u2019s Draught"
   description: 'Cure: +10 Health on Kill, Curse: MaxHealth -10%'
   icon: {fileID: 0}
-  price: 0
+  price: 120

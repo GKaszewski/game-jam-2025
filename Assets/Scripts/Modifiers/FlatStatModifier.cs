@@ -9,7 +9,7 @@ namespace Modifiers
     {
         public Stat stat;
         public float value;
-        public string Description => $"{stat} +{value}";
+        public string Description => BuildDescription();
         
         public void Apply(CharacterAttributes attributes)
         {
@@ -64,6 +64,11 @@ namespace Modifiers
                     throw new ArgumentOutOfRangeException();
             }
         }
-
+        
+        private string BuildDescription()
+        {
+            var sign = value >= 0 ? "+" : "";
+            return $"{stat} {sign}{value}";
+        }
     }
 }

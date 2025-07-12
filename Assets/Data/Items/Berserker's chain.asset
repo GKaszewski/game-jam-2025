@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c437a5565f39495281bf1dd14dd6ba40, type: 3}
-  m_Name: Basic Item
+  m_Name: Berserker's chain
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -27,16 +27,28 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|Modifiers.PercentStatModifier, Assembly-CSharp
     - Name: stat
       Entry: 3
-      Data: 0
+      Data: 7
     - Name: percent
       Entry: 4
-      Data: 0
+      Data: 0.25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Modifiers.PercentStatModifier, Assembly-CSharp
+    - Name: stat
+      Entry: 3
+      Data: 9
+    - Name: percent
+      Entry: 4
+      Data: 0.15
     - Name: 
       Entry: 8
       Data: 
@@ -48,20 +60,32 @@ MonoBehaviour:
       Data: 
     - Name: curses
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Interfaces.IStatModifier, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[Interfaces.IStatModifier, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 3|Modifiers.PercentStatModifier, Assembly-CSharp
+      Data: 4|Modifiers.PercentStatModifier, Assembly-CSharp
     - Name: stat
       Entry: 3
-      Data: 7
+      Data: 4
     - Name: percent
       Entry: 4
-      Data: 0
+      Data: -0.2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Modifiers.FlatStatModifier, Assembly-CSharp
+    - Name: stat
+      Entry: 3
+      Data: 1
+    - Name: value
+      Entry: 4
+      Data: -10
     - Name: 
       Entry: 8
       Data: 
@@ -71,7 +95,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  itemName: 
-  description: 
+  itemName: Berserker's chain
+  description: 'Cure: MeleeDamage +25%, AttackSpeed +15%, Curse: Armor -20%, MaxHealth
+    -10'
   icon: {fileID: 0}
-  price: 0
+  price: 300
