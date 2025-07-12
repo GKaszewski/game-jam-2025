@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Basic Wave
   m_EditorClassIdentifier: 
   spawns:
-  - enemyPrefab: {fileID: 7086213802762404816, guid: c29b6821cd98a1968b14fa55dc11ff9d, type: 3}
+  - enemyPrefab: {fileID: 204632724861940951, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
     count: 12
     spawnInterval: 0.5
