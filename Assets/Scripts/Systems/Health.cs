@@ -14,6 +14,8 @@ namespace Systems
         
         public GameObject LastAttacker => lastAttacker;
 
+        public event Action OnTakeDamage;
+
         private void Start()
         {
             character.attributes.SetHealth(initialHealth);
@@ -24,6 +26,7 @@ namespace Systems
             lastAttacker = attacker;
             var effectiveDamage = Math.Max(damage - character.attributes.Armor, 1);
             character.attributes.ModifyHealth(-effectiveDamage);
+            OnTakeDamage?.Invoke();
         }
     }
 }
