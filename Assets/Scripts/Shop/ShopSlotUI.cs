@@ -51,6 +51,7 @@ namespace Shop
         public void MarkAsPurchased()
         {
             purchaseButton.interactable = false;
+            purchaseButton.GetComponentInChildren<TextMeshProUGUI>().text = "Purchased";
         }
     }
 }

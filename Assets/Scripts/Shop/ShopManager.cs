@@ -62,6 +62,10 @@ namespace Shop
             shopUI.Show(currentItemChoices, currentWeaponChoices, this);
         }
         
+        public List<StatModifierItem> DrawRandomItems(int count) => DrawRandomItems(possibleItems, count);
+        
+        public List<WeaponItem> DrawRandomWeapons(int count) => DrawRandomItems(possibleWeapons, count);
+        
         private void OpenShop()
         {
             OpenShop(GameManager.Instance.CurrentRound);

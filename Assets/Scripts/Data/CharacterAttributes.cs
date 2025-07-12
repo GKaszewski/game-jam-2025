@@ -180,6 +180,7 @@ namespace Data
                 {
                     Level++;
                     experience -= ExperienceToNextLevel();
+                    experience = Math.Min(0, experience);
                 }
                 else if (experience < 0)
                 {
