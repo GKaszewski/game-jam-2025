@@ -40,7 +40,7 @@ namespace Weapons
             other.TryGetComponent<Health>(out var health);
             if (other.gameObject == Owner) return;
             
-            health.TakeDamage(Damage);
+            health?.TakeDamage(Damage);
             Destroy(gameObject);
         }
     }
