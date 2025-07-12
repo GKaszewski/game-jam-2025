@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2964327480768693548}
   - component: {fileID: 435001957072118475}
   - component: {fileID: 1527323237162929931}
+  - component: {fileID: 3779661959168575914}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Enemy
@@ -339,6 +340,22 @@ MonoBehaviour:
   character: {fileID: 3298396436480561959}
   aiPath: {fileID: 2964327480768693548}
   target: {fileID: 0}
+--- !u!114 &3779661959168575914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204632724861940951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858b89cbe8774ee4a74182a9c4195c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.1
+  flashColor: {r: 1.6817929, g: 1.6817929, b: 1.6817929, a: 1}
+  health: {fileID: 9093693903318130491}
+  spriteRenderer: {fileID: 987872320002065258}
 --- !u!1 &3667932760953165253
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +411,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0c6402377b097ca3992a420467f72056, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

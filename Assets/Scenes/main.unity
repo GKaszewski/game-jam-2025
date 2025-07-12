@@ -465,7 +465,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -786,6 +786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: strawberry
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 3456e0420235c3e7797d8a191c2de57f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c6402377b097ca3992a420467f72056, type: 2}
     - target: {fileID: 7878350319992209165, guid: 3456e0420235c3e7797d8a191c2de57f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -834,6 +838,11 @@ PrefabInstance:
 --- !u!4 &628985991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 3456e0420235c3e7797d8a191c2de57f, type: 3}
+  m_PrefabInstance: {fileID: 628985990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &628985992 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: 3456e0420235c3e7797d8a191c2de57f, type: 3}
   m_PrefabInstance: {fileID: 628985990}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &640255470
@@ -6937,6 +6946,7 @@ GameObject:
   - component: {fileID: 1261447610}
   - component: {fileID: 1261447609}
   - component: {fileID: 1261447613}
+  - component: {fileID: 1261447614}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -7041,8 +7051,8 @@ MonoBehaviour:
     armor: 0
     level: 1
     experience: 0
-    baseExperienceToLevelUp: 25
-    damage: 49
+    baseExperienceToLevelUp: 5
+    damage: 1
     rangedDamage: 1
     meleeDamage: 1
     attackRange: 16
@@ -7190,6 +7200,71 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   weapons: []
   weaponsManager: {fileID: 1261447612}
+--- !u!114 &1261447614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261447599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858b89cbe8774ee4a74182a9c4195c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.1
+  flashColor: {r: 1.6934906, g: 1.6934906, b: 1.6934906, a: 1}
+  health: {fileID: 1261447608}
+  spriteRenderer: {fileID: 628985992}
+--- !u!1 &1265960066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265960068}
+  - component: {fileID: 1265960067}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1265960067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265960066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 6e3296081b34c0dce831316c320aa3b2, type: 2}
+--- !u!4 &1265960068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265960066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.939604, y: -1.4867522, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300312975
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,3 +8678,4 @@ SceneRoots:
   - {fileID: 1791967925}
   - {fileID: 1368041001}
   - {fileID: 1953393769}
+  - {fileID: 1265960068}
