@@ -28,6 +28,7 @@ namespace Data
         [OdinSerialize] public float armor = 0f;
         [OdinSerialize] public int level = 1;
         [OdinSerialize] public int experience = 0;
+        [OdinSerialize] public int baseExperienceToLevelUp = 100;
 
         [OdinSerialize, PropertyTooltip("This is damage multiplier")]
         public float damage = 1f;
@@ -54,6 +55,7 @@ namespace Data
         
         public event Action<int> OnExperienceChanged;
         public event Action<int> OnLevelChanged;
+        public event Action OnLevelUp;
 
         public float Health
         {
@@ -174,7 +176,15 @@ namespace Data
                 experience = value;
                 OnExperienceChanged?.Invoke(experience);
                 
-                //TODO: Implement level up logic
+                if (experience >= ExperienceToNextLevel())
+                {
+                    Level++;
+                    experience -= ExperienceToNextLevel();
+                }
+                else if (experience < 0)
+                {
+                    experience = 0;
+                }
             }
         }
         
@@ -186,6 +196,7 @@ namespace Data
                 if (level == value) return;
                 level = value;
                 OnLevelChanged?.Invoke(level);
+                OnLevelUp?.Invoke();
             }
         }
 
@@ -326,6 +337,11 @@ namespace Data
             AttackSpeed = 1f;
             Level = 1;
             Experience = 0;
+        }
+
+        private int ExperienceToNextLevel()
+        {
+            return (int)(baseExperienceToLevelUp * Math.Pow(Level, 2));
         }
     }
 }

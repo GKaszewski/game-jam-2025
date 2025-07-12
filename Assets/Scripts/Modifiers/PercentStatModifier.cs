@@ -11,7 +11,7 @@ namespace Modifiers
 
         public Stat stat;
         public float percent;
-        public string Description => $"{stat} +{percent * 100}%";
+        public string Description => GetDescription();
 
         public void Apply(CharacterAttributes attributes)
         {
@@ -54,6 +54,12 @@ namespace Modifiers
                 Stat.AttackSpeed => (T)(object)attributes.AttackSpeed,
                 _ => throw new System.ArgumentOutOfRangeException()
             };
+        }
+        
+        private string GetDescription()
+        {
+            var sign = percent >= 0 ? "+" : "";
+            return $"{stat} {sign}{percent * 100}%";
         }
     }
 }

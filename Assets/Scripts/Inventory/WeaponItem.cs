@@ -10,5 +10,6 @@ namespace Inventory
         [OdinSerialize, TextArea] public string description;
         [OdinSerialize] public GameObject prefab;
         [OdinSerialize] public Sprite icon;
+        [OdinSerialize] public int price;
     }
 }
