@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using Inventory;
 using Systems;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Shop
 {

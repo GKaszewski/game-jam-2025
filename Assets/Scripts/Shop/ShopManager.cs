@@ -22,13 +22,11 @@ namespace Shop
 
         private void OnEnable()
         {
-            // GameManager.Instance.OnRoundEnd += OpenShop;
             GameManager.Instance.OnStoreOpen += OpenShop;
         }
 
         private void OnDisable()
         {
-            // GameManager.Instance.OnRoundEnd -= OpenShop;
             GameManager.Instance.OnStoreOpen -= OpenShop;
         }
 
