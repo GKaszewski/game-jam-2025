@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa44a330e8343c08e3af638d466c118, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  weaponName: 
-  description: 
-  prefab: {fileID: 0}
-  icon: {fileID: 0}
-  price: 0
+  weaponName: Sword
+  description: slash
+  prefab: {fileID: 4198373928733079624, guid: 37be88b9c527bf70f81113879644e46c, type: 3}
+  icon: {fileID: 8233071653059976297, guid: 669e3ba4383a707eb951cae82a9ea538, type: 3}
+  price: 500

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa44a330e8343c08e3af638d466c118, type: 3}
   m_Name: Rifle
   m_EditorClassIdentifier: 
-  weaponName: 
-  description: 
-  prefab: {fileID: 0}
-  icon: {fileID: 0}
-  price: 0
+  weaponName: Rifle
+  description: pif paf faster
+  prefab: {fileID: 4198373928733079624, guid: d23194b52cb07a0f9ba88d40c3ea9082, type: 3}
+  icon: {fileID: -252851320, guid: 669e3ba4383a707eb951cae82a9ea538, type: 3}
+  price: 200

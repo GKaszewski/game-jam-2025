@@ -4015,6 +4015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: 4991b70e99800747597a28d7cff2a3d8, type: 2}
+  - {fileID: 11400000, guid: 745becb03d4a312b88b8a5b372d7f3cf, type: 2}
   spawnPoints:
   - {fileID: 521201812}
   - {fileID: 1593097268}
@@ -7056,7 +7057,7 @@ MonoBehaviour:
     damage: 1
     rangedDamage: 1
     meleeDamage: 1
-    attackRange: 16
+    attackRange: 1
     attackSpeed: 1
 --- !u!4 &1261447604
 Transform:
@@ -7805,63 +7806,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 54233099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1642425552
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 204632724861940951, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_Name
-      value: Advanced Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.170298
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.3622494
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b00136274fd417af18bc2ba9111a054c, type: 3}
 --- !u!114 &1767717491 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
@@ -7873,63 +7817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f37c728615643a1abc988bbfd34986c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1791967925
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 204632724861940951, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_Name
-      value: Basic Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.669
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8982578637896279064, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5225fe09f2ee0168b3a40e21948820a, type: 3}
 --- !u!1 &1869990420
 GameObject:
   m_ObjectHideFlags: 0
@@ -7997,7 +7884,7 @@ MonoBehaviour:
   itemsContainer: {fileID: 701978012}
   upgradeSlotPrefab: {fileID: 7648813253940703347, guid: 14c4939434dba2696acbbc2285c85fca, type: 3}
   itemsCount: 3
-  weaponsCount: 2
+  weaponsCount: 0
   shopManager: {fileID: 1767717491}
   upgradeManager: {fileID: 1953393765}
 --- !u!114 &1953393765
@@ -8526,9 +8413,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: itemsPerShop
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 1261447609}
+    - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: possibleWeapons.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: 'possibleWeapons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 418269386bc531f5496cc51469fa7fd9, type: 2}
+    - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: 'possibleWeapons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c7dadcb685556983ebad06b46b2d94a3, type: 2}
+    - target: {fileID: 1501730282976965803, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: 'possibleWeapons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d75b6849f442cefa8319c3c30f4ff6e, type: 2}
     - target: {fileID: 4567329713039532410, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8552,6 +8459,10 @@ PrefabInstance:
     - target: {fileID: 4985729667885723412, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: m_Name
       value: Shop UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985729667885723412, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5200376552900448965, guid: 4d1c30f952fa59fb9b0cc1a987f40ad8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8673,8 +8584,6 @@ SceneRoots:
   - {fileID: 54233099}
   - {fileID: 479709345}
   - {fileID: 48810671}
-  - {fileID: 1791967925}
   - {fileID: 1368041001}
   - {fileID: 1953393769}
   - {fileID: 1265960068}
-  - {fileID: 1642425552}

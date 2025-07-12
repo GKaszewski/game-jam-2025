@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa44a330e8343c08e3af638d466c118, type: 3}
   m_Name: Grenade
   m_EditorClassIdentifier: 
-  weaponName: 
-  description: 
-  prefab: {fileID: 0}
-  icon: {fileID: 0}
-  price: 0
+  weaponName: Grenade
+  description: Boom
+  prefab: {fileID: 4198373928733079624, guid: e9b74b330ff89ddbaa1db1dcfe57ecef, type: 3}
+  icon: {fileID: 1754851762, guid: 669e3ba4383a707eb951cae82a9ea538, type: 3}
+  price: 340
