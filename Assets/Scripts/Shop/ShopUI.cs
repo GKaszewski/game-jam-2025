@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Inventory;
 using Systems;
@@ -13,6 +14,7 @@ namespace Shop
         [SerializeField] private Transform weaponSlotParent;
         [SerializeField] private ShopSlotUI slotPrefab;
         [SerializeField] private TextMeshProUGUI roundsText;
+        [SerializeField] private TextMeshProUGUI coinsText;
         
         private List<ShopSlotUI> currentSlots = new();
 
@@ -24,6 +26,11 @@ namespace Shop
         private void OnDisable()
         {
             GameManager.Instance.OnRoundEnd -= UpdateRoundText;
+        }
+
+        private void Update()
+        {
+            coinsText.text = $"Coins: {GameManager.Instance.Coins}";
         }
 
         public void Show(List<StatModifierItem> items, List<WeaponItem> weapons, ShopManager shopManager)

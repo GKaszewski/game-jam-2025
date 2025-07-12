@@ -19,12 +19,23 @@ namespace Systems
 
         private void Update()
         {
+            if (!target)
+            {
+                AquirePlayerTarget();
+            }
+            
             if (!target || weapons.Count == 0) return;
 
             foreach (var weapon in weapons)
             {
                 weapon.Target = target.position;
             }
+        }
+        
+        private void AquirePlayerTarget()
+        {
+            var player = GameManager.Instance.Player;
+            target = player ? player.transform : null;
         }
     }
 }

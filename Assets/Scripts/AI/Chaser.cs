@@ -33,6 +33,8 @@ namespace AI
 
         private void SetTarget()
         {
+            if (!GameManager.Instance.Player) return;
+            
             target = GameManager.Instance.Player.transform;
         }
     }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 1527323237162929931}
   - component: {fileID: 3779661959168575914}
   m_Layer: 7
-  m_Name: Basic Enemy
+  m_Name: Advanced Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,11 +130,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes:
-    health: 10
-    maxHealth: 10
-    moveSpeed: 2
+    health: 20
+    maxHealth: 20
+    moveSpeed: 4
     luck: 0
-    armor: 0
+    armor: 5
     level: 1
     experience: 0
     baseExperienceToLevelUp: 100
@@ -142,7 +142,7 @@ MonoBehaviour:
     rangedDamage: 1
     meleeDamage: 1
     attackRange: 1
-    attackSpeed: 1
+    attackSpeed: 2
 --- !u!114 &9093693903318130491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 3298396436480561959}
-  initialHealth: 40
+  initialHealth: 60
 --- !u!114 &2885408193262179595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73900af7351645fdb19d016d621feb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expReward: 5
-  coinReward: 1
+  expReward: 10
+  coinReward: 10
 --- !u!114 &4043203721006489305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,9 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponStats:
-    damage: 2
-    attackSpeed: 1
-    range: 0.7
+    damage: 8
+    attackSpeed: 1.5
+    range: 0.9
     damageType: 0
   character: {fileID: 3298396436480561959}
   targetMask:
@@ -417,7 +417,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2614437293559027876, guid: 3e57b8831fc895368a3f55e7162c76f5, type: 3}
+  m_Sprite: {fileID: 8798316271258456706, guid: 300802c327db1b39f94d8a241e26db32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
