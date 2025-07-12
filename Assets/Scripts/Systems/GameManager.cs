@@ -25,6 +25,7 @@ namespace Systems
         public float RoundTime => roundTime;
         public int MaxRounds => maxRounds;
         public bool StoreIsClosed { get; set; } = true;
+        public float RoundTimeLeft => Mathf.Max(0, timer);
 
         public event Action<int> OnRoundStart;
         public event Action<int> OnRoundEnd;
