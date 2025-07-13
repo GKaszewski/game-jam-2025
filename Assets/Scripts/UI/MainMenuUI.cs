@@ -8,7 +8,7 @@ namespace UI
 {
     public class MainMenuUI : MonoBehaviour
     {
-        [SerializeField] private Object mainScene;
+        [SerializeField] private String mainScene;
         [SerializeField] private Button exitButton;
 
         private void OnEnable()
@@ -26,7 +26,7 @@ namespace UI
 
         public void StartGame()
         {
-            SceneManager.LoadScene(mainScene.name);
+            SceneManager.LoadScene(mainScene);
         }
 
         public void ExitGame()

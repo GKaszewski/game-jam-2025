@@ -72,7 +72,7 @@ namespace Systems
                 yield return new WaitUntil(() => StoreIsClosed);
             }
             
-            SceneManager.LoadScene(winScene.name);
+            SceneManager.LoadScene("win");
         }
         
         public void AddCoins(int amount)
