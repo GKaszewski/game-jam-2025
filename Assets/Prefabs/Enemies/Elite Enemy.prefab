@@ -160,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 3298396436480561959}
   initialHealth: 60
+  damageSound: {fileID: 8300000, guid: 893f218bd3d93406c867dec435b15af8, type: 3}
 --- !u!114 &2885408193262179595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +208,7 @@ MonoBehaviour:
     attackSpeed: 3
     range: 1
     damageType: 0
+  shotSound: {fileID: 0}
   character: {fileID: 3298396436480561959}
   targetMask:
     serializedVersion: 2
@@ -361,6 +363,7 @@ MonoBehaviour:
     attackSpeed: 1
     range: 0
     damageType: 1
+  shotSound: {fileID: 8300000, guid: cdcff7307369a4db1bc35c35d662a51a, type: 3}
   character: {fileID: 3298396436480561959}
   projectilePrefab: {fileID: 6885276120120059828, guid: 384ebad50ab3d71fca9ff79cd767f236, type: 3}
   firePoint: {fileID: 4665778829147842035}

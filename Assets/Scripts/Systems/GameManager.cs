@@ -3,6 +3,7 @@ using System.Collections;
 using Data;
 using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Systems
 {
@@ -16,6 +17,8 @@ namespace Systems
         [OdinSerialize, SerializeField] private int coins = 0;
         [OdinSerialize, SerializeField] private float roundTime = 60f;
         [OdinSerialize, SerializeField] private int maxRounds = 20;
+        [OdinSerialize, SerializeField] private Scene winScene;
+        [OdinSerialize, SerializeField] private Transform arenaCenter;
         
         [OdinSerialize, SerializeField] private Character player;
         
@@ -35,14 +38,9 @@ namespace Systems
         private void Awake()
         {
             if (Instance == null)
-            {
                 Instance = this;
-                // DontDestroyOnLoad(gameObject);
-            }
             else
-            {
                 Destroy(gameObject);
-            }
         }
 
         private void Start()
@@ -57,6 +55,7 @@ namespace Systems
             
             for (currentRound = 1; currentRound <= maxRounds; currentRound++)
             {
+                player.transform.position = new Vector3(arenaCenter.position.x, arenaCenter.position.y, player.transform.position.z);
                 OnRoundStart?.Invoke(currentRound);
                 timer = roundTime;
 
@@ -71,6 +70,8 @@ namespace Systems
                 OnStoreOpen?.Invoke();
                 yield return new WaitUntil(() => StoreIsClosed);
             }
+            
+            SceneManager.LoadScene(winScene.name);
         }
         
         public void AddCoins(int amount)

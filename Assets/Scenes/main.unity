@@ -690,6 +690,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527003242}
   m_CullTransparentMesh: 1
+--- !u!1 &537749034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 537749035}
+  m_Layer: 0
+  m_Name: Arena center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &537749035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537749034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,10 +4012,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ea29e7d7d04eb5be628e56520e9bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRound: 1
+  currentRound: 0
   coins: 0
   roundTime: 60
-  maxRounds: 20
+  maxRounds: 10
+  winScene:
+    m_Handle: 0
+  arenaCenter: {fileID: 537749035}
   player: {fileID: 1261447603}
 --- !u!4 &749274450
 Transform:
@@ -4016,6 +4050,15 @@ MonoBehaviour:
   waves:
   - {fileID: 11400000, guid: 4991b70e99800747597a28d7cff2a3d8, type: 2}
   - {fileID: 11400000, guid: 745becb03d4a312b88b8a5b372d7f3cf, type: 2}
+  - {fileID: 11400000, guid: e32b17dcf1001077490f3ab800fabdf4, type: 2}
+  - {fileID: 11400000, guid: b9ce5bce1d46fbee48a019aeed82406e, type: 2}
+  - {fileID: 11400000, guid: 41d2b4c1611e53ab6b68113c4941722d, type: 2}
+  - {fileID: 11400000, guid: 10fc57ef8866ac8c7892d3f846cc0ba3, type: 2}
+  - {fileID: 11400000, guid: 17986cfca09ad48ba9de9fccd54c949a, type: 2}
+  - {fileID: 11400000, guid: 065bf6bf1dc51bfb1b4436d27aa25974, type: 2}
+  - {fileID: 11400000, guid: 649b4ee6da2995f6d999f9f15c8923ba, type: 2}
+  - {fileID: 11400000, guid: f26af8d1f6eee7213ac737bcd1ab7139, type: 2}
+  - {fileID: 11400000, guid: f26af8d1f6eee7213ac737bcd1ab7139, type: 2}
   spawnPoints:
   - {fileID: 521201812}
   - {fileID: 1593097268}
@@ -7130,6 +7173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1261447603}
   initialHealth: 100
+  damageSound: {fileID: 8300000, guid: 9aa61b47699a80b88b3241f8fc9dfe4f, type: 3}
 --- !u!114 &1261447609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7887,6 +7931,7 @@ MonoBehaviour:
   weaponsCount: 0
   shopManager: {fileID: 1767717491}
   upgradeManager: {fileID: 1953393765}
+  levelUpSound: {fileID: 0}
 --- !u!114 &1953393765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8587,3 +8632,4 @@ SceneRoots:
   - {fileID: 1368041001}
   - {fileID: 1953393769}
   - {fileID: 1265960068}
+  - {fileID: 537749035}

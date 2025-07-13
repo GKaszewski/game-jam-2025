@@ -137,6 +137,7 @@ MonoBehaviour:
     attackSpeed: 0.4
     range: 1.5
     damageType: 0
+  shotSound: {fileID: 8300000, guid: 8f570ce576650480bb8e82ebac10017f, type: 3}
   character: {fileID: 0}
   targetMask:
     serializedVersion: 2

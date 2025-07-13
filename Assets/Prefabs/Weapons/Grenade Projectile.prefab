@@ -82,6 +82,7 @@ MonoBehaviour:
     attackSpeed: 0
     range: 0
     damageType: 0
+  explosionSound: {fileID: 8300000, guid: 1b79fafd6abffa1fea93132f57308403, type: 3}
 --- !u!58 &6375708012542479532
 CircleCollider2D:
   m_ObjectHideFlags: 0

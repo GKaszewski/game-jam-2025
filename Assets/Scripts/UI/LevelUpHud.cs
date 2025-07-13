@@ -20,6 +20,7 @@ namespace UI
         [SerializeField] private int weaponsCount = 2;
         [SerializeField, Scene] private ShopManager shopManager;
         [SerializeField, Scene] private UpgradeManager upgradeManager;
+        [SerializeField] private AudioClip levelUpSound;
 
         private void OnEnable()
         {
@@ -34,6 +35,11 @@ namespace UI
         
         private void OnLevelUp()
         {
+            if (levelUpSound)
+            {
+                AudioSource.PlayClipAtPoint(levelUpSound, new Vector3(0f, 0f, 0f));
+            }
+            
             Show();
         }
 

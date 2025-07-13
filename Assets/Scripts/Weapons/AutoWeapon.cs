@@ -12,9 +12,10 @@ namespace Weapons
         
         public override void Fire()
         {
+            PlayShotSound();
+            
             var direction = (Target - (Vector2)firePoint.position).normalized;
             firePoint.up = direction;
-            Debug.DrawLine(firePoint.position, Target, Color.red, 2f);
             
             var projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             projectile.TryGetComponent<IDamageInflectorSetup>(out var inflector);

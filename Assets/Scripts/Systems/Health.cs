@@ -11,6 +11,7 @@ namespace Systems
         
         [Self, SerializeField] private Character character;
         [SerializeField] private float initialHealth = 100f;
+        [SerializeField] private AudioClip damageSound;
         
         public GameObject LastAttacker => lastAttacker;
 
@@ -24,8 +25,15 @@ namespace Systems
         public void TakeDamage(float damage, GameObject attacker = null)
         {
             lastAttacker = attacker;
+            
             var effectiveDamage = Math.Max(damage - character.attributes.Armor, 1);
             character.attributes.ModifyHealth(-effectiveDamage);
+            
+            if (damageSound)
+            {
+                AudioSource.PlayClipAtPoint(damageSound, transform.position);
+            }
+            
             OnTakeDamage?.Invoke();
         }
     }

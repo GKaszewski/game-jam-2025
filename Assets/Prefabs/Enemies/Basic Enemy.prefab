@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 3298396436480561959}
   initialHealth: 40
+  damageSound: {fileID: 8300000, guid: 902828a83676948b2a085a2c006596fd, type: 3}
 --- !u!114 &2885408193262179595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +205,7 @@ MonoBehaviour:
     attackSpeed: 1
     range: 0.7
     damageType: 0
+  shotSound: {fileID: 8300000, guid: aa2fcafe8628340078c5a01209215a07, type: 3}
   character: {fileID: 3298396436480561959}
   targetMask:
     serializedVersion: 2

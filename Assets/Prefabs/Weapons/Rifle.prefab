@@ -169,6 +169,7 @@ MonoBehaviour:
     attackSpeed: 4
     range: 0
     damageType: 1
+  shotSound: {fileID: 8300000, guid: 135aaf5d6ee7e4169ab58510d7ab4796, type: 3}
   character: {fileID: 0}
   projectilePrefab: {fileID: 6885276120120059828, guid: 7daf84d0215f690a5b8b2e49e636a02a, type: 3}
   firePoint: {fileID: 173884399746824259}

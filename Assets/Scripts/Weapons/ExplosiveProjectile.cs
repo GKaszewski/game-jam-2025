@@ -12,6 +12,7 @@ namespace Weapons
         [SerializeField] private float speed = 10f;
         [SerializeField] private float lifeTime = 5f;
         [SerializeField] private WeaponStats stats;
+        [SerializeField] private AudioClip explosionSound;
         
         public float Damage { get; private set; }
         public GameObject Owner { get; private set; }
@@ -54,6 +55,12 @@ namespace Weapons
                 hitCollider.TryGetComponent<Health>(out var health);
                 health?.TakeDamage(Damage, Owner);
             }
+            
+            if (explosionSound)
+            {
+                AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+            }
+            
             Destroy(gameObject);
         }
         

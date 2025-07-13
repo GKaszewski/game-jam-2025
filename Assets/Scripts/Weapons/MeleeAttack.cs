@@ -14,6 +14,13 @@ namespace Weapons
         {
             var finalRange = GetFinalRange();
             var hits = Physics2D.OverlapCircleAll(transform.position, finalRange, targetMask);
+            var hitAnybody = hits.Length > 0;
+
+            if (hitAnybody)
+            {
+                PlayShotSound();
+            }
+            
             foreach (var hit in hits)
             {
                 hit.TryGetComponent<Health>(out var health);

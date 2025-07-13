@@ -12,6 +12,7 @@ namespace Weapons
         private float timer;
         
         [OdinSerialize, InlineProperty] public WeaponStats weaponStats = new();
+        public AudioClip shotSound;
         public Character character;
 
         private void Update()
@@ -38,6 +39,12 @@ namespace Weapons
         protected float GetFinalRange()
         {
             return weaponStats.range * character.attributes.AttackRange;
+        }
+        
+        protected void PlayShotSound()
+        {
+            if (!shotSound) return;
+            AudioSource.PlayClipAtPoint(shotSound, transform.position);
         }
 
         public abstract void Fire();
