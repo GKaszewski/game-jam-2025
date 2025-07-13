@@ -4016,8 +4016,7 @@ MonoBehaviour:
   coins: 0
   roundTime: 60
   maxRounds: 10
-  winScene:
-    m_Handle: 0
+  winScene: {fileID: 102900000, guid: aa0f834fdce931b899f0fe952ad0b680, type: 3}
   arenaCenter: {fileID: 537749035}
   player: {fileID: 1261447603}
 --- !u!4 &749274450

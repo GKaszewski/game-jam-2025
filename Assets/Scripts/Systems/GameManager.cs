@@ -4,6 +4,7 @@ using Data;
 using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Systems
 {
@@ -17,7 +18,7 @@ namespace Systems
         [OdinSerialize, SerializeField] private int coins = 0;
         [OdinSerialize, SerializeField] private float roundTime = 60f;
         [OdinSerialize, SerializeField] private int maxRounds = 20;
-        [OdinSerialize, SerializeField] private Scene winScene;
+        [OdinSerialize, SerializeField] private Object winScene;
         [OdinSerialize, SerializeField] private Transform arenaCenter;
         
         [OdinSerialize, SerializeField] private Character player;
