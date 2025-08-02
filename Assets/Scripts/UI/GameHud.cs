@@ -3,6 +3,7 @@ using Systems;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Attribute = Data.Attribute;
 
 namespace UI
 {
@@ -18,11 +19,11 @@ namespace UI
             var player = GameManager.Instance.Player;
             if (!player) return;
             
-            expText.text = $"EXP: {player.attributes.Experience}";
+            expText.text = $"EXP: {player.attributes.Get(Attribute.Experience)}";
             coinsText.text = $"Coins: {GameManager.Instance.Coins}";
             roundTimeLeftText.text = $"{GameManager.Instance.RoundTimeLeft:F1}s";
-            healthSlider.maxValue = player.attributes.MaxHealth;
-            healthSlider.value = player.attributes.Health;
+            healthSlider.maxValue = player.attributes.Get(Attribute.MaxHealth);
+            healthSlider.value = player.attributes.Get(Attribute.Health);
         }
     }
 }

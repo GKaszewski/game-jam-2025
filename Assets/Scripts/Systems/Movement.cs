@@ -3,6 +3,7 @@ using Data;
 using KBCore.Refs;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Attribute = Data.Attribute;
 
 namespace Systems
 {
@@ -43,7 +44,7 @@ namespace Systems
         {
             if (!rb) return;
             
-            var velocity = new Vector2(movementInput.x, movementInput.y).normalized * character.attributes.MoveSpeed;
+            var velocity = new Vector2(movementInput.x, movementInput.y).normalized * character.attributes.Get(Attribute.MoveSpeed);
             rb.linearVelocity = velocity;
         }
     }

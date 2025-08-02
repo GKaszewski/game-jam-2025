@@ -5,11 +5,13 @@ using KBCore.Refs;
 using Shop;
 using Systems;
 using UnityEngine;
+using Attribute = Data.Attribute;
 
 namespace UI
 {
     public class LevelUpHud : MonoBehaviour
     {
+        private float previousLevel = 1f;
         private List<UpgradeSlot> currentSlots = new();
         private List<StatModifierItem> currentItemChoices = new();
         private List<WeaponItem> currentWeaponChoices = new(); 

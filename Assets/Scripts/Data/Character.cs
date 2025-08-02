@@ -1,11 +1,17 @@
+using System;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Data
 {
-    public class Character : MonoBehaviour
+    public class Character : SerializedMonoBehaviour
     {
-        [OdinSerialize, InlineProperty] public CharacterAttributes attributes = new();
+        [OdinSerialize] public CharacterAttributes attributes = new();
+
+        private void Start()
+        {
+            attributes.Init();
+        }
     }
 }

@@ -4,6 +4,7 @@ using KBCore.Refs;
 using Pathfinding;
 using Systems;
 using UnityEngine;
+using Attribute = Data.Attribute;
 
 namespace AI
 {
@@ -27,7 +28,7 @@ namespace AI
         {
             if (!target || !aiPath) return;
 
-            aiPath.maxSpeed = character.attributes.MoveSpeed;
+            aiPath.maxSpeed = character.attributes.Get(Attribute.MoveSpeed);
             aiPath.destination = target.position;
         }
 

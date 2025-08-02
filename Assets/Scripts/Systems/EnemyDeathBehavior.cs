@@ -2,6 +2,7 @@ using System;
 using Interfaces;
 using Sirenix.Serialization;
 using UnityEngine;
+using Attribute = Data.Attribute;
 
 namespace Systems
 {
@@ -14,7 +15,7 @@ namespace Systems
         
         public void Die(GameObject killer = null)
         {
-            GameManager.Instance.Player.attributes.ModifyExperience(expReward);
+            GameManager.Instance.Player.attributes.Modify(Attribute.Experience, expReward);
             GameManager.Instance.AddCoins(coinReward);
             
             OnAnyEnemyKilled?.Invoke(killer ?? GameManager.Instance.Player.gameObject, gameObject);

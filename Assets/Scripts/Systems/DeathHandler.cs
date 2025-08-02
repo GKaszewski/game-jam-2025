@@ -13,12 +13,12 @@ namespace Systems
 
         private void OnEnable()
         {
-            character.attributes.OnHealthChanged += OnHealthChanged;
+            character.attributes.Subscribe(Attribute.Health, OnHealthChanged);
         }
 
         private void OnDisable()
         {
-            character.attributes.OnHealthChanged -= OnHealthChanged;
+            character.attributes.Unsubscribe(Attribute.Health, OnHealthChanged);
         }
 
         private void OnHealthChanged(float newHealth)

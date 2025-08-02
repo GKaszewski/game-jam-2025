@@ -3,6 +3,7 @@ using Data;
 using Interfaces;
 using Systems;
 using UnityEngine;
+using Attribute = Data.Attribute;
 
 namespace Modifiers
 {
@@ -19,7 +20,7 @@ namespace Modifiers
         public void OnKill(GameObject killer, GameObject victim)
         {
             killer.TryGetComponent(out Character character);
-            character?.attributes.ModifyHealth(value);
+            character?.attributes.Modify(Attribute.Health, value);
         }
     }
 }

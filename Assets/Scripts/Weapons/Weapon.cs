@@ -4,6 +4,7 @@ using Interfaces;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using Attribute = Data.Attribute;
 
 namespace Weapons
 {
@@ -27,18 +28,18 @@ namespace Weapons
         
         private float GetFinalAttackSpeed()
         {
-            return character.attributes.AttackSpeed * weaponStats.attackSpeed;
+            return character.attributes.Get(Attribute.AttackSpeed) * weaponStats.attackSpeed;
         }
 
         protected float GetFinalDamage()
         {
-            return weaponStats.damage + character.attributes.Damage * 
-                   (weaponStats.damageType == DamageType.Melee ? character.attributes.MeleeDamage : character.attributes.RangedDamage);
+            return weaponStats.damage + character.attributes.Get(Attribute.Damage) * 
+                   (weaponStats.damageType == DamageType.Melee ? character.attributes.Get(Attribute.MeleeDamage) : character.attributes.Get(Attribute.RangedDamage));
         }
 
         protected float GetFinalRange()
         {
-            return weaponStats.range * character.attributes.AttackRange;
+            return weaponStats.range * character.attributes.Get(Attribute.AttackRange);
         }
         
         protected void PlayShotSound()

@@ -2,6 +2,7 @@ using System;
 using Data;
 using KBCore.Refs;
 using UnityEngine;
+using Attribute = Data.Attribute;
 
 namespace Systems
 {
@@ -19,15 +20,15 @@ namespace Systems
 
         private void Start()
         {
-            character.attributes.SetHealth(initialHealth);
+            character.attributes.Set(Attribute.Health, initialHealth);
         }
 
         public void TakeDamage(float damage, GameObject attacker = null)
         {
             lastAttacker = attacker;
             
-            var effectiveDamage = Math.Max(damage - character.attributes.Armor, 1);
-            character.attributes.ModifyHealth(-effectiveDamage);
+            var effectiveDamage = Math.Max(damage - character.attributes.Get(Attribute.Armor), 1);
+            character.attributes.Modify(Attribute.Health, -effectiveDamage);
             
             if (damageSound)
             {

@@ -1,13 +1,14 @@
 using System;
 using Data;
 using Interfaces;
+using Attribute = Data.Attribute;
 
 namespace Modifiers
 {
     [Serializable]
     public class FlatStatModifier : IStatModifier
     {
-        public Stat stat;
+        public Attribute stat;
         public float value;
         public string Description => BuildDescription();
         
@@ -30,35 +31,35 @@ namespace Modifiers
         {
             switch (stat)
             {
-                case Stat.Health:
-                    attributes.ModifyHealth(value);
+                case Attribute.Health:
+                    attributes.Modify(Attribute.Health, value);
                     break;
-                case Stat.MaxHealth:
-                    attributes.ModifyMaxHealth(value);
+                case Attribute.MaxHealth:
+                    attributes.Modify(Attribute.MaxHealth, value);
                     break;
-                case Stat.MoveSpeed:
-                    attributes.ModifyMoveSpeed(value);
+                case Attribute.MoveSpeed:
+                    attributes.Modify(Attribute.MoveSpeed, value);
                     break;
-                case Stat.Luck:
-                    attributes.ModifyLuck(value);
+                case Attribute.Luck:
+                    attributes.Modify(Attribute.Luck, value);
                     break;
-                case Stat.Armor:
-                    attributes.ModifyArmor(value);
+                case Attribute.Armor:
+                    attributes.Modify(Attribute.Armor, value);
                     break;
-                case Stat.Damage:
-                    attributes.ModifyDamage(value);
+                case Attribute.Damage:
+                    attributes.Modify(Attribute.Damage, value);
                     break;
-                case Stat.RangedDamage:
-                    attributes.ModifyRangedDamage(value);
+                case Attribute.RangedDamage:
+                    attributes.Modify(Attribute.RangedDamage, value);
                     break;
-                case Stat.MeleeDamage:
-                    attributes.ModifyMeleeDamage(value);
+                case Attribute.MeleeDamage:
+                    attributes.Modify(Attribute.MeleeDamage, value);
                     break;
-                case Stat.AttackRange:
-                    attributes.ModifyAttackRange(value);
+                case Attribute.AttackRange:
+                    attributes.Modify(Attribute.AttackRange, value);
                     break;
-                case Stat.AttackSpeed:
-                    attributes.ModifyAttackSpeed(value);
+                case Attribute.AttackSpeed:
+                    attributes.Modify(Attribute.AttackSpeed, value);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
