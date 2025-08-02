@@ -7,7 +7,7 @@ namespace Data
 {
     public class Character : SerializedMonoBehaviour
     {
-        [OdinSerialize] public CharacterAttributes attributes = new();
+        [OdinSerialize, NonSerialized] public CharacterAttributes attributes = new();
 
         private void Start()
         {

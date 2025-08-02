@@ -7166,7 +7166,7 @@ MonoBehaviour:
       Data: 5|Data.AttributeData`1[[System.Single, mscorlib]], Assembly-CSharp
     - Name: Value
       Entry: 4
-      Data: 1
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -7220,7 +7220,7 @@ MonoBehaviour:
       Data: 8|Data.AttributeData`1[[System.Single, mscorlib]], Assembly-CSharp
     - Name: Value
       Entry: 4
-      Data: 5
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -7274,7 +7274,7 @@ MonoBehaviour:
       Data: 11|Data.AttributeData`1[[System.Single, mscorlib]], Assembly-CSharp
     - Name: Value
       Entry: 4
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -7310,7 +7310,7 @@ MonoBehaviour:
       Data: 13|Data.AttributeData`1[[System.Single, mscorlib]], Assembly-CSharp
     - Name: Value
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
